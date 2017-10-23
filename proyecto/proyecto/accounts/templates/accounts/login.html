@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block head %}
+<meta charset="utf-8">
+<title>Login</title>
+{% endblock %}
+
+{% block body %}
+
+<div class= "container">
+<h2>Inicio de Sesión</h2>
+<p>
+  Puedes iniciar sesión aqui.
+</p>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-light" name="button">Inicio de Sesión</button>
+
+</form>
+</div>
+
+{% endblock %}
